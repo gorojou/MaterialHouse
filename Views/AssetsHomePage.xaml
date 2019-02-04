@@ -1,0 +1,307 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<CarouselPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MaterialHouse.Views.AssetsHomePage" xmlns:VM="clr-namespace:MaterialHouse.ViewModels" xmlns:local="clr-namespace:MaterialHouse.Behaviors"  BackgroundColor="#FFFFFF">
+  <ContentPage x:Name="page" >
+      <ContentPage.ToolbarItems>
+            <ToolbarItem x:Name="Share" Icon="share.png" Order="Primary"  Priority="0" ></ToolbarItem>  
+            <ToolbarItem x:Name="Create" Icon="create.png" Order="Secondary" Priority="1" ></ToolbarItem>  
+            <ToolbarItem x:Name="Delete" Icon="Delete.png" Order="Secondary" Priority="2" ></ToolbarItem>  
+            <ToolbarItem x:Name="Menu" Icon="hamburger.png" Order="Secondary" Priority="3" ></ToolbarItem>  
+      </ContentPage.ToolbarItems>
+    
+    <StackLayout BackgroundColor="#e5e5e5" VerticalOptions="CenterAndExpand">
+    </StackLayout>
+    <StackLayout>
+      <StackLayout VerticalOptions="CenterAndExpand">
+        <Grid Style="{StaticResource GridStyle}">
+          <Grid.RowDefinitions>
+            <RowDefinition Height="150"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+          </Grid.RowDefinitions>
+          <Image x:Name="logo0" Source="logo.png" Grid.Row="0"  Grid.ColumnSpan="3"  WidthRequest="150" HeightRequest="150" HorizontalOptions="CenterAndExpand" />
+           <Label x:Name="namepro0" Grid.Row="1"   Grid.ColumnSpan="3" Style="{StaticResource LabelStyle}" HorizontalOptions="CenterAndExpand"  FontSize="16" />
+          <Image x:Name="plug0" Source="Plug.png" Grid.Row="2" Grid.Column="0" WidthRequest="30" HeightRequest="30" />
+          <Button x:Name="titleplug0" Frame.HasShadow="True" Grid.Row="3" Grid.Column="0" Style="{StaticResource LinkStyle}" Text="HVAC" Clicked="OnPlugClicked"/>
+          <Image x:Name="idea0" Source="Idea.png" Grid.Row="2" Grid.Column="1" WidthRequest="30" HeightRequest="30" />
+          <Button x:Name="titleidea0" Frame.HasShadow="True" Grid.Row="3" Grid.Column="1" Style="{StaticResource LinkStyle}" Text="Appliance" Clicked="OnIdeaClicked"/>
+          <Image x:Name="door0" Source="Door.png" Grid.Row="2" Grid.Column="2" WidthRequest="30" HeightRequest="30" />
+          <Button x:Name="titledoor0" Frame.HasShadow="True" Grid.Row="3" Grid.Column="2" Style="{StaticResource LinkStyle}" Text="Door"  Clicked="OnDoorClicked"/>
+          <Image x:Name="window0" Source="Window.png" Grid.Row="4" Grid.Column="0" WidthRequest="30" HeightRequest="30" />
+          <Button x:Name="titlewindow0" Frame.HasShadow="True" Grid.Row="5" Grid.Column="0" Style="{StaticResource LinkStyle}" Text="Window" Clicked="OnWindowsClicked"/>
+          <Image x:Name="roof0" Source="Roofing.png" Grid.Row="4" Grid.Column="1" WidthRequest="30" HeightRequest="30" />
+          <Button x:Name="titleroof0" Frame.HasShadow="True" Grid.Row="5" Grid.Column="1" Style="{StaticResource LinkStyle}" Text="Roof" Clicked="OnRoofClicked"/>
+          <Image x:Name="paint0" Source="Paint.png" Grid.Row="4" Grid.Column="2" WidthRequest="30" HeightRequest="30" />
+          <Button x:Name="titlepaint0" Frame.HasShadow="True" Grid.Row="5" Grid.Column="2" Style="{StaticResource LinkStyle}" Text="Paint" Clicked="OnPaintClicked"/>
+          <Image x:Name="note0" Source="Edit.png" Grid.Row="6" Grid.Column="0" WidthRequest="30" HeightRequest="30" />
+          <Button x:Name="titlenote0" Frame.HasShadow="True" Grid.Row="7" Grid.Column="0" Style="{StaticResource LinkStyle}" Text="Note" Clicked="OnEditClicked"/>
+        
+          <Image x:Name="backMenu" Source="back.png" Grid.Row="6" Grid.Column="1" WidthRequest="30" HeightRequest="30" />
+          <Button x:Name="tittleBck" Frame.HasShadow="True" Grid.Row="7" Grid.Column="1" Style="{StaticResource LinkStyle}" Text="Back" Clicked="OnClickedBack"/>
+          <Image x:Name="add" Source="add.png" Grid.Row="6" Grid.Column="2" WidthRequest="30" HeightRequest="30" />
+          <Button x:Name="titleadd" Frame.HasShadow="True" Grid.Row="7" Grid.Column="2" Style="{StaticResource LinkStyle}" Text="Add..." Clicked="OnaddClicked"/>
+
+        </Grid>
+      </StackLayout>
+    </StackLayout>
+  </ContentPage>
+  <ContentPage x:Name="page1" >
+    <StackLayout BackgroundColor="#e5e5e5" VerticalOptions="CenterAndExpand">
+    </StackLayout>
+    <StackLayout>
+      <StackLayout VerticalOptions="CenterAndExpand">
+        <Grid Style="{StaticResource GridStyle}">
+          <Grid.RowDefinitions>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+          </Grid.RowDefinitions>
+          <Image x:Name="logo" Source="logo.png" Grid.Row="0"  Grid.ColumnSpan="2"  WidthRequest="100" HeightRequest="100" HorizontalOptions="CenterAndExpand" />
+          <Image x:Name="plug" Source="Plug.png" Grid.Row="1" Grid.Column="0" WidthRequest="30" HeightRequest="30" />
+          <Label x:Name="titleplug" Grid.Row="1"  Grid.Column="1" Style="{StaticResource LabelStyle}" HorizontalOptions="StartAndExpand"  FontSize="18" Text="HVAC"/>
+          <Label x:Name="namepro" Grid.Row="2"   Grid.ColumnSpan="2" Style="{StaticResource LabelStyle}" HorizontalOptions="StartAndExpand"  FontSize="18" />
+          <Entry x:Name="brandplug" Grid.Row="3" Grid.ColumnSpan="2"  Style="{StaticResource EntryStyle}" Placeholder="Brand" />
+          <Entry x:Name="warrantyplug" Grid.Row="4" Grid.ColumnSpan="2"  Style="{StaticResource EntryStyle}" Placeholder="Warranty" />
+          <Entry x:Name="descripctionplug" Grid.Row="5" Grid.ColumnSpan="2"  Style="{StaticResource EntryStyle}" Placeholder="Descripction" />
+          <Entry x:Name="commentsplug" Grid.Row="6" Grid.ColumnSpan="2"  Style="{StaticResource EntryStyle}" Placeholder="Comments" />      
+          <Button x:Name="attachplug" Text="Attach" Image="Attach.png" Grid.Row="7" Style="{StaticResource LinkStyle}" Clicked="OnAttachplugClicked" Grid.Column="1" />
+          <Button x:Name="back" Grid.Row="8" Grid.Column="0" Style="{StaticResource buttonStyle}" Clicked="OnClickedBackMenu" Text="Menu" />
+          <Button x:Name="saveplug" Grid.Row="8" Grid.Column="1" Style="{StaticResource buttonStyle}" Clicked="OnSaveHVAC" Text="Save" />
+
+        </Grid>
+      </StackLayout>
+    </StackLayout>
+  </ContentPage>
+  <ContentPage x:Name="page2">
+    <StackLayout>
+      <StackLayout VerticalOptions="CenterAndExpand">
+        <Grid Style="{StaticResource GridStyle}">
+          <Grid.RowDefinitions>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+          </Grid.RowDefinitions>
+          <Image x:Name="logo1" Source="logo.png" Grid.Row="0"  Grid.ColumnSpan="2"  WidthRequest="100" HeightRequest="100" HorizontalOptions="CenterAndExpand" />
+          <Image x:Name="idea" Source="Idea.png" Grid.Row="1" Grid.Column="0"  WidthRequest="30" HeightRequest="30"/>
+          <Label x:Name="titleidea" Grid.Row="1"  Grid.Column="1" Style="{StaticResource LabelStyle}"  HorizontalOptions="StartAndExpand"  FontSize="18" Text="Appliances"/>
+          <Label x:Name="namepro1" Grid.Row="2"  Grid.ColumnSpan="2" Style="{StaticResource LabelStyle}" HorizontalOptions="StartAndExpand"  FontSize="18" />
+          <Entry x:Name="brandidea" Grid.Row="3" Grid.ColumnSpan="2"  Style="{StaticResource EntryStyle}" Placeholder="Brand" />
+          <Entry x:Name="warrantyidea" Grid.Row="4"  Grid.ColumnSpan="2"  Style="{StaticResource EntryStyle}" Placeholder="Warranty" />
+          <Entry x:Name="descripctionidea" Grid.Row="5" Grid.ColumnSpan="2"  Style="{StaticResource EntryStyle}" Placeholder="Descripction" />
+          <Entry x:Name="commentsidea" Grid.Row="6" Grid.ColumnSpan="2"  Style="{StaticResource EntryStyle}" Placeholder="Comments" />
+          <Button x:Name="attachidea" Text="Attach" Image="Attach.png" Grid.Row="7" Style="{StaticResource LinkStyle}" Clicked="OnAttachideaClicked" Grid.Column="1" />
+          <Button x:Name="back1" Grid.Row="8" Grid.Column="0" Style="{StaticResource buttonStyle}" Clicked="OnClickedBackMenu" Text="Menu" />
+          <Button x:Name="saveidea" Grid.Row="8" Grid.Column="1" Style="{StaticResource buttonStyle}" Clicked="OnSaveAppliances" Text="Save" />
+   
+        </Grid>
+      </StackLayout>
+      <StackLayout x:Name="sLFooter2" Orientation="Horizontal" VerticalOptions="End" HeightRequest="48" Padding="20">
+      </StackLayout>
+    </StackLayout>
+  </ContentPage>
+
+
+
+  <ContentPage x:Name="page3">
+    <StackLayout>
+      <StackLayout VerticalOptions="CenterAndExpand">
+        <Grid Style="{StaticResource GridStyle}">
+          <Grid.RowDefinitions>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+          </Grid.RowDefinitions>
+          <Image x:Name="logo2" Source="logo.png" Grid.Row="0" Grid.ColumnSpan="2" WidthRequest="100" HeightRequest="100" HorizontalOptions="CenterAndExpand" />
+          <Image x:Name="door" Source="Door.png" Grid.Row="1" Grid.Column="0" WidthRequest="25" HeightRequest="25"/>
+          <Label x:Name="titledoor" Grid.Row="1"  Grid.Column="1" Style="{StaticResource LabelStyle}"  HorizontalOptions="StartAndExpand" FontSize="18" Text="Doors"/>
+          <Label x:Name="namepro2" Grid.Row="2"  Grid.ColumnSpan="2" Style="{StaticResource LabelStyle}" HorizontalOptions="StartAndExpand"  FontSize="18" />
+          <Entry x:Name="branddoor" Grid.Row="3" Grid.ColumnSpan="2"  Style="{StaticResource EntryStyle}" Placeholder="Brand" />
+          <Entry x:Name="warrantydoor" Grid.Row="4" Grid.ColumnSpan="2"  Style="{StaticResource EntryStyle}" Placeholder="Warranty" />
+          <Entry x:Name="descripctiondoor" Grid.Row="5" Grid.ColumnSpan="2"  Style="{StaticResource EntryStyle}" Placeholder="Descripction" />
+          <Entry x:Name="commentsdoor" Grid.Row="6" Grid.ColumnSpan="2"  Style="{StaticResource EntryStyle}" Placeholder="Comments" />
+          <Button x:Name="attachdoor" Text="Attach" Image="Attach.png" Grid.Row="7" Style="{StaticResource LinkStyle}" Clicked="OnAttachdoorClicked" Grid.Column="1" />
+          <Button x:Name="back2" Grid.Row="8" Grid.Column="0" Style="{StaticResource buttonStyle}" Clicked="OnClickedBackMenu" Text="Menu" />
+          <Button x:Name="savedoor" Grid.Row="8" Grid.Column="1" Style="{StaticResource buttonStyle}" Clicked="OnSaveDoors" Text="Save" />
+
+        </Grid>
+      </StackLayout>
+      <StackLayout x:Name="sLFooter3" Orientation="Horizontal" VerticalOptions="End" HeightRequest="48" Padding="20">
+      </StackLayout>
+    </StackLayout>
+  </ContentPage>
+
+  <ContentPage x:Name="page4">
+    <StackLayout>
+      <StackLayout VerticalOptions="CenterAndExpand">
+        <Grid Style="{StaticResource GridStyle}">
+          <Grid.RowDefinitions>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+          </Grid.RowDefinitions>
+          <Image x:Name="logo3" Source="logo.png" Grid.Row="0"  Grid.ColumnSpan="2" WidthRequest="100" HeightRequest="100" HorizontalOptions="CenterAndExpand" />
+          <Image x:Name="window" Source="Window.png" Grid.Row="1" Grid.Column="0" WidthRequest="25" HeightRequest="25"/>
+          <Label x:Name="titlewindow" Grid.Row="1"  Grid.Column="1" Style="{StaticResource LabelStyle}"  HorizontalOptions="StartAndExpand"  FontSize="18" Text="Windows"/>
+          <Label x:Name="namepro3" Grid.Row="2"  Grid.ColumnSpan="2" Style="{StaticResource LabelStyle}" HorizontalOptions="StartAndExpand"  FontSize="18" />
+          <Entry x:Name="brandwindow" Grid.Row="3" Grid.ColumnSpan="2"  Style="{StaticResource EntryStyle}" Placeholder="Brand" />
+          <Entry x:Name="warrantywindow" Grid.Row="4" Grid.ColumnSpan="2"  Style="{StaticResource EntryStyle}" Placeholder="Warranty" />
+          <Entry x:Name="descripctionwindow" Grid.Row="5" Grid.ColumnSpan="2"  Style="{StaticResource EntryStyle}" Placeholder="Descripction" />
+          <Entry x:Name="commentswindow" Grid.Row="6" Grid.ColumnSpan="2"  Style="{StaticResource EntryStyle}" Placeholder="Comments" />
+          <Button x:Name="attachwindow" Text="Attach" Image="Attach.png" Grid.Row="7" Style="{StaticResource LinkStyle}" Clicked="OnAttachwindowClicked" Grid.Column="1" />
+          <Button x:Name="back3" Grid.Row="8" Grid.Column="0" Style="{StaticResource buttonStyle}" Clicked="OnClickedBackMenu" Text="Menu" />
+          <Button x:Name="savewindow" Grid.Row="8" Grid.Column="1" Style="{StaticResource buttonStyle}" Clicked="OnSaveWindows" Text="Save" />
+        </Grid>
+      </StackLayout>
+      <StackLayout x:Name="sLFooter4" Orientation="Horizontal" VerticalOptions="End" HeightRequest="48" Padding="20">
+      </StackLayout>
+    </StackLayout>
+  </ContentPage>
+  <ContentPage x:Name="page5">
+    <StackLayout>
+      <StackLayout VerticalOptions="CenterAndExpand">
+        <Grid Style="{StaticResource GridStyle}">
+          <Grid.RowDefinitions>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+          </Grid.RowDefinitions>
+          <Image x:Name="logo4" Source="logo.png" Grid.Row="0"  Grid.ColumnSpan="2" WidthRequest="100" HeightRequest="100" HorizontalOptions="CenterAndExpand" />
+          <Image x:Name="roof" Source="Roofing.png" Grid.Row="1" Grid.Column="0"  WidthRequest="25" HeightRequest="25" />
+          <Label x:Name="titleroof" Grid.Row="1"  Grid.Column="1" Style="{StaticResource LabelStyle}" HorizontalOptions="StartAndExpand" FontSize="18" Text="Roof"/>
+          <Label x:Name="namepro4" Grid.Row="2"   Grid.ColumnSpan="2" Style="{StaticResource LabelStyle}" HorizontalOptions="StartAndExpand"  FontSize="18" />
+          <Entry x:Name="brandroof" Grid.Row="3" Grid.ColumnSpan="2"  Style="{StaticResource EntryStyle}" Placeholder="Brand" />
+          <Entry x:Name="warrantyroof" Grid.Row="4" Grid.ColumnSpan="2"  Style="{StaticResource EntryStyle}" Placeholder="Warranty" />
+          <Entry x:Name="descripctionroof" Grid.Row="5" Grid.ColumnSpan="2"  Style="{StaticResource EntryStyle}" Placeholder="Descripction" />
+          <Entry x:Name="commentsroof" Grid.Row="6" Grid.ColumnSpan="2"  Style="{StaticResource EntryStyle}" Placeholder="Comments" />
+          <Button x:Name="attachroof" Text="Attach" Image="Attach.png" Grid.Row="7" Style="{StaticResource LinkStyle}" Clicked="OnAttachroofClicked" Grid.Column="1" />
+          <Button x:Name="back4" Grid.Row="8" Grid.Column="0" Style="{StaticResource buttonStyle}" Clicked="OnClickedBackMenu" Text="Menu" />
+          <Button x:Name="saveroof" Grid.Row="8" Grid.Column="1" Style="{StaticResource buttonStyle}" Clicked="OnSaveRoof" Text="Save" />
+        </Grid>
+      </StackLayout>
+      <StackLayout x:Name="sLFooter5" Orientation="Horizontal" VerticalOptions="End" HeightRequest="48" Padding="20">
+      </StackLayout>
+    </StackLayout>
+  </ContentPage>
+
+  <ContentPage x:Name="page6">
+    <StackLayout>
+      <RelativeLayout VerticalOptions="CenterAndExpand">
+        <Grid Style="{StaticResource GridStyle}">
+          <Grid.RowDefinitions>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+          </Grid.RowDefinitions>
+          <Image x:Name="logo5" Source="logo.png" Grid.Row="0"  Grid.ColumnSpan="2" WidthRequest="100" HeightRequest="100" HorizontalOptions="CenterAndExpand" />
+          <Image x:Name="paint" Source="Paint.png" Grid.Row="1" Grid.Column="0"  WidthRequest="25" HeightRequest="25" />
+          <Label x:Name="titlepaint" Grid.Row="1"  Grid.Column="1" Style="{StaticResource LabelStyle}" HorizontalOptions="StartAndExpand" FontSize="18" Text="Paint"/>
+          <Label x:Name="namepro5" Grid.Row="2"  Grid.ColumnSpan="2" Style="{StaticResource LabelStyle}" HorizontalOptions="StartAndExpand"  FontSize="18" />
+          <Entry x:Name="brandpaint" Grid.Row="3" Grid.ColumnSpan="2"  Style="{StaticResource EntryStyle}" Placeholder="Brand" />
+          <Entry x:Name="warrantypaint" Grid.Row="4" Grid.ColumnSpan="2"  Style="{StaticResource EntryStyle}" Placeholder="Warranty" />
+          <Entry x:Name="descripctionpaint" Grid.Row="5" Grid.ColumnSpan="2"  Style="{StaticResource EntryStyle}" Placeholder="Descripction" />
+          <Entry x:Name="commentspaint" Grid.Row="6" Grid.ColumnSpan="2"  Style="{StaticResource EntryStyle}" Placeholder="Comments" /> 
+          <Button x:Name="attachpaint" Text="Attach" Image="Attach.png" Grid.Row="7" Style="{StaticResource LinkStyle}" Clicked="OnAttachpaintClicked" Grid.Column="1" />
+          <Button x:Name="back6" Grid.Row="8" Grid.Column="0" Style="{StaticResource buttonStyle}" Clicked="OnClickedBackMenu" Text="Menu" />
+          <Button x:Name="savepaint" Grid.Row="8" Grid.Column="1" Style="{StaticResource buttonStyle}"  Clicked="OnSavePaint" Text="Save" />
+        </Grid>
+      </RelativeLayout>
+      <StackLayout x:Name="sLFooter6" Orientation="Horizontal" VerticalOptions="End" HeightRequest="48" Padding="20">
+      </StackLayout>
+    </StackLayout>
+  </ContentPage>
+  <ContentPage x:Name="page7">
+    <StackLayout>
+      <StackLayout VerticalOptions="CenterAndExpand">
+        <Grid Style="{StaticResource GridStyle}">
+          <Grid.RowDefinitions>
+            <RowDefinition Height="150"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="50"/>
+          </Grid.RowDefinitions>
+          <Image x:Name="logo6" Source="logo.png" Grid.Row="0"  Grid.ColumnSpan="2"  WidthRequest="150" HeightRequest="150" HorizontalOptions="CenterAndExpand" />
+          <Image x:Name="note" Source="Edit.png" Grid.Row="1"  Grid.Column="0"  WidthRequest="20" HeightRequest="20" />
+          <Label x:Name="titlenote1" Grid.Row="1"  Grid.Column="1" Style="{StaticResource LabelStyle}" FontSize="18" HorizontalOptions="StartAndExpand" Text="Notes"/>
+          <Entry x:Name="titlenote" Grid.Row="3" Grid.ColumnSpan="2"  Style="{StaticResource EntryStyle}" Placeholder="Title" />
+          <Editor x:Name="commentsnote" Grid.Row="4" Grid.ColumnSpan="2"  Style="{StaticResource EntryStyle}"/>
+          <Button x:Name="back7" Grid.Row="4" Grid.Column="0" Style="{StaticResource buttonStyle}" Clicked="OnClickedBackMenu" Text="Menu" />
+          <Button x:Name="savenote" Grid.Row="4" Grid.Column="1" Style="{StaticResource buttonStyle}" Clicked="OnSaveNote" Text="Save" />
+          
+        </Grid>
+      </StackLayout>
+      <StackLayout x:Name="sLFooter7" Orientation="Horizontal" VerticalOptions="End" HeightRequest="48" Padding="20">
+      </StackLayout>
+    </StackLayout>
+  </ContentPage>
+
+  <ContentPage x:Name="page8">
+    <StackLayout>
+      <StackLayout VerticalOptions="CenterAndExpand">
+        <Grid Style="{StaticResource GridStyle}">
+          <Grid.RowDefinitions>
+            <RowDefinition Height="150"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+          </Grid.RowDefinitions>
+          <Image x:Name="logo7" Source="logo.png" Grid.Row="0"  Grid.ColumnSpan="2"  WidthRequest="150" HeightRequest="150" HorizontalOptions="CenterAndExpand" />
+          <Image x:Name="add1" Source="add.png" Grid.Row="1"  Grid.Column="0"  WidthRequest="20" HeightRequest="20" />
+          <Label x:Name="addtittle" Grid.Row="1"  Grid.Column="1" Style="{StaticResource LabelStyle}" FontSize="18" HorizontalOptions="StartAndExpand" Text="Add New Asset"/>
+          <Button x:Name="back8" Grid.Row="4" Grid.Column="0" Style="{StaticResource ButtonActStyle}" Text="Menu" Clicked="OnClickedBackMenu" />
+          <Button x:Name="savenewasset" Grid.Row="4" Grid.Column="1"  Style="{StaticResource ButtonActStyle}"  Text="Add New Asset" Clicked="OnAddNewAsset" />
+        </Grid>
+      </StackLayout>
+      <StackLayout x:Name="sLFooter8" Orientation="Horizontal" VerticalOptions="End" HeightRequest="48" Padding="20">
+      </StackLayout>
+    </StackLayout>
+  </ContentPage>
+  </CarouselPage>

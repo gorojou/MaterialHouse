@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MaterialHouse.Views.LoginPage" xmlns:VM="clr-namespace:MaterialHouse.ViewModels" 
+             xmlns:local="clr-namespace:MaterialHouse.Behaviors"
+             xmlns:local1="clr-namespace:MaterialHouse;assembly=MaterialHouse"
+             xmlns:Common="clr-namespace:MaterialHouse.Classes;assembly=MaterialHouse"
+             BackgroundImage="{x:Static Common:ImagePathResources.BackgroundImagePath}">
+  <ContentPage.Resources>
+    <ResourceDictionary>
+
+    </ResourceDictionary>
+  </ContentPage.Resources>
+  <ScrollView Style="{StaticResource ScrollViewStyle}">
+    <StackLayout Style="{StaticResource StackLayoutStyle}" VerticalOptions="CenterAndExpand">
+      <Grid Style="{StaticResource GridStyle}">
+        <Grid.RowDefinitions>
+          <RowDefinition Height="200"/>
+          <RowDefinition Height="50"/>
+          <RowDefinition Height="50"/>
+          <RowDefinition Height="50"/>
+          <RowDefinition Height="50"/>
+          <RowDefinition Height="50"/>
+          <RowDefinition Height="50"/>
+          <!--<RowDefinition Height="50"/>
+          <RowDefinition Height="20"/>-->
+        </Grid.RowDefinitions>
+        <Image x:Name="logo" Source="icon.png"  Grid.Row="0"  WidthRequest="150" HeightRequest="150" HorizontalOptions="CenterAndExpand" Margin="20,0,0,0" />
+        <!--<Image x:Name="logo" Source="logo.png" Grid.Row="0" WidthRequest="150" HeightRequest="150" HorizontalOptions="CenterAndExpand" Margin="20,0,0,0" />-->
+        <!--<Image Source="iconEmail.png" HeightRequest="30" VerticalOptions="Center" Grid.Row="2" Grid.Column="0"/>-->
+        <Entry x:Name="username" Grid.Row="2" BackgroundColor="Transparent" Style="{StaticResource EntryStyle}" Placeholder="Email Address" Keyboard="Email">
+          <Entry.Behaviors>
+            <local:EmailValidatorBehavior />
+            <local:MaxLengthValidatorBehavior  MaxLength="50"/>
+          </Entry.Behaviors>
+        </Entry>
+        <!--<Image Source="iconPassword.png" HeightRequest="30" VerticalOptions="Center"  Grid.Row="3" Grid.Column="0" />-->
+        <Entry x:Name="password" Grid.Row="3" BackgroundColor="Transparent" Style="{StaticResource EntryStyle}" Placeholder="Password" IsPassword="True">
+          <local:MaxLengthValidatorBehavior  MaxLength="12"/>
+        </Entry>
+        <Button x:Name="logIn" Frame.HasShadow="True" Grid.Row="4" Style="{StaticResource ButtonActStyle}" Text="Log In" Command="{Binding GetUsersCommand}" Clicked="OnLogInClicked" />
+        <Button x:Name="signIn" Grid.Row="5" Style="{StaticResource ButtonActStyle}"  Text="Register"  Clicked="OnSignInClicked"/>
+        
+        <Image Source="fblogin.png" Grid.Row="6"  HorizontalOptions="Fill" HeightRequest="{x:Static Common:DoubleResources.FBButtonHeight}"/>
+        
+        
+        <!--<Label Grid.Row="7" Grid.Column="0" Style="{StaticResource LabelStyle}" HorizontalTextAlignment="Center">Remember me</Label>
+       <Switch  x:Name="remember" Grid.Row="8" Grid.Column="0" WidthRequest="50" HeightRequest="50" HorizontalOptions="Center"  />-->
+      </Grid>
+      <!--#FFFF00-->
+    </StackLayout>
+  </ScrollView>
+</ContentPage>
